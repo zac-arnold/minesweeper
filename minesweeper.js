@@ -5,25 +5,97 @@ var board = {
   cells: [
     {row: 0,
       col: 0,
-      isMine: true,
+      isMine: false,
       hidden: true
     },
 
     { row: 0,
       col: 1,
-      isMine: true,
+      isMine: false,
+      hidden: true
+    },
+
+    { row: 0,
+      col: 2,
+      isMine: false,
+      hidden: true
+    },
+
+    { row: 0,
+      col: 3,
+      isMine: false,
       hidden: true
     },
 
     { row: 1,
       col: 0,
-      isMine: true,
+      isMine: false,
       hidden: true
     },
 
     { row: 1,
       col: 1,
-      isMine: true,
+      isMine: false,
+      hidden: true
+    },
+
+    { row: 1,
+      col: 2,
+      isMine: false,
+      hidden: true
+    },
+
+    { row: 1,
+      col: 3,
+      isMine: false,
+      hidden: true
+    },
+
+    { row: 2,
+      col: 0,
+      isMine: false,
+      hidden: true
+    },
+
+    { row: 2,
+      col: 1,
+      isMine: false,
+      hidden: true
+    },
+
+    { row: 2,
+      col: 2,
+      isMine: false,
+      hidden: true
+    },
+
+    { row: 2,
+      col: 3,
+      isMine: false,
+      hidden: true
+    },
+
+    { row: 3,
+      col: 0,
+      isMine: false,
+      hidden: true
+    },
+
+    { row: 3,
+      col: 1,
+      isMine: false,
+      hidden: true
+    },
+
+    { row: 3,
+      col: 2,
+      isMine: false,
+      hidden: true
+    },
+
+    { row: 3,
+      col: 3,
+      isMine: false,
       hidden: true
     },
 
