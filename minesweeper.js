@@ -106,7 +106,7 @@ var board = {
 
 function startGame () {
 
-  for (var i = 0 ; i < board.cells.length; i++ ){
+  for (var i = 0 ; i < board.cells.length; i++){
 
       var cell = board.cells[i]
     
@@ -117,9 +117,9 @@ function startGame () {
   lib.initBoard()
 }
 
+console.log(board.cells)
+document.onclick = checkForWin()
 
-document.addEventListener("click", function(){checkForWin})
-document.addEventListener('contextmenu', function(){checkForWin})
 
 // Define this function to look for a win condition:
 //
@@ -127,45 +127,43 @@ document.addEventListener('contextmenu', function(){checkForWin})
 // 2. Are all of the mines marked?
 function checkForWin () {
   
+  var isTheWinner = true
+
   for (var i = 0 ; i < board.cells.length; i++ ){
-    if (cells.isMine && cells.isMarked){
-      return displayMessage}
-
+    var cell = board.cells[i]
+    if (cells.isMine && !cells.isMarked){
+      isTheWinner = flase 
+    }  
   
-} 
+    if (isTheWinner){
+      lib.displayMessage('You win!')
+    }
 
- 
 
-  // if statement to check .isMine and isMarked are true
-  // if statement mine is marked there are cells with hidden being true then fails. 
 
-  lib.displayMessage('You win!')
 }
 
 // Define this function to count the number of mines around the cell
 // (there could be as many as 8). You don't have to get the surrounding
 // cells yourself! Just use `lib.getSurroundingCells`: 
 //
-//   var surrounding = lib.getSurroundingCells(cell.row, cell.col)
+  // var surrounding = lib.getSurroundingCells(cell.row, cell.col)
 //
-// It will return cell objects in an array. You should loop through 
-// them, counting the number of times `cell.isMine` is true.
+// It will return cell objects in an array. 
+// You should loop through them, counting the number of times `cell.isMine` is true.
 
 function countSurroundingMines (cell) {
   var count = 0
 
-  var surrounding = lib.getSurroundingCells(cell.row, cell.col)
+    var surrounding = lib.getSurroundingCells(cell.row, cell.col)
 
-  for (var i = 0; i < surrounding.length ; i++) {
+    for (var i = 0; i < surrounding.length; i++) {
+      var cell = surrounding[i]
 
-    var cell = surrounding[i]
-
-    if (cell.isMine) {
-      count ++
-    } 
-  }
- 
-
+      if (cell.isMine = true) {
+      count++} 
+    
+      }
   return count
 }
-
+} 
