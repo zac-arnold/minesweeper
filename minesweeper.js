@@ -110,7 +110,7 @@ function startGame () {
 
       var cell = board.cells[i]
     
-      cell.SurroundingMines = countSurroundingMines(cell)
+      cell.surroundingMines = countSurroundingMines(cell)
 
   }
 
@@ -118,7 +118,7 @@ function startGame () {
 }
 
 console.log(board.cells)
-document.onclick = checkForWin()
+document.onclick = checkForWin
 
 function checkForWin () {
   
@@ -126,7 +126,7 @@ function checkForWin () {
 
   for (var i = 0 ; i < board.cells.length; i++ ){
     var cell = board.cells[i]
-    if (cells.isMine && !cells.isMarked){
+    if (cell.isMine && !cell.isMarked){
       isTheWinner = flase 
     }  
   
@@ -150,7 +150,7 @@ function checkForWin () {
 function countSurroundingMines (cell) {
 
   var count = 0
-  console.log(count)
+
   var surrounding = lib.getSurroundingCells(cell.row, cell.col)
 
     for (var i = 0; i < surrounding.length; i++) {
