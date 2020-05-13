@@ -120,11 +120,6 @@ function startGame () {
 console.log(board.cells)
 document.onclick = checkForWin()
 
-
-// Define this function to look for a win condition:
-//
-// 1. Are all of the cells that are NOT mines visible?
-// 2. Are all of the mines marked?
 function checkForWin () {
   
   var isTheWinner = true
@@ -153,17 +148,19 @@ function checkForWin () {
 // You should loop through them, counting the number of times `cell.isMine` is true.
 
 function countSurroundingMines (cell) {
-  var count = 0
 
-    var surrounding = lib.getSurroundingCells(cell.row, cell.col)
+  var count = 0
+  console.log(count)
+  var surrounding = lib.getSurroundingCells(cell.row, cell.col)
 
     for (var i = 0; i < surrounding.length; i++) {
       var cell = surrounding[i]
 
-      if (cell.isMine = true) {
+      if (cell.isMine) {
       count++} 
     
       }
   return count
 }
+
 } 
