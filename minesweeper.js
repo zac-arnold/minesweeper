@@ -110,15 +110,16 @@ function startGame () {
 
       var cell = board.cells[i]
     
-      cell.surroundingMines = countSurroundingMines(cell)
+      cell.surroundingMines = countSurroundingMines (cell);
 
   }
 
   lib.initBoard()
 }
 
-console.log(board.cells)
-document.onclick = checkForWin
+  console.log(board.cells)
+
+  document.onclick = checkForWin
 
 function checkForWin () {
   
@@ -150,7 +151,7 @@ function checkForWin () {
 function countSurroundingMines (cell) {
 
   var count = 0
-
+  
   var surrounding = lib.getSurroundingCells(cell.row, cell.col)
 
     for (var i = 0; i < surrounding.length; i++) {
@@ -160,7 +161,8 @@ function countSurroundingMines (cell) {
       count++} 
     
       }
-  return count
-}
 
-} 
+ return count
+}
+)
+}
