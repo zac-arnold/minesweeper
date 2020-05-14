@@ -117,11 +117,11 @@ function startGame () {
   lib.initBoard()
 }
 
-console.log(board.cells)
+
 
 document.onclick = checkForWin
 
-  function checkForWin () {
+function checkForWin () {
   
   var isTheWinner = true
 
@@ -130,7 +130,7 @@ document.onclick = checkForWin
     var cell = board.cells[i]
 
     if (cell.isMine && !cell.isMarked){
-      isTheWinner = flase 
+      isTheWinner = false 
     }  
   
     if (isTheWinner){
@@ -138,7 +138,7 @@ document.onclick = checkForWin
     }
 
 }
-
+}
 // Define this function to count the number of mines around the cell
 // (there could be as many as 8). You don't have to get the surrounding
 // cells yourself! Just use `lib.getSurroundingCells`: 
@@ -148,7 +148,7 @@ document.onclick = checkForWin
 // It will return cell objects in an array. 
 // You should loop through them, counting the number of times `cell.isMine` is true.
 
-}
+
 function countSurroundingMines (cell) {
 
   var count = 0
