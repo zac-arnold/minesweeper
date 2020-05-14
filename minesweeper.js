@@ -1,7 +1,121 @@
 document.addEventListener('DOMContentLoaded', startGame)
 
-// Define your `board` object here!
+
+function createBoard (){
   var board = {
+    cells: [
+      {row: 0,
+        col: 0,
+        isMine: true,
+        hidden: true
+      },
+  
+      { row: 0,
+        col: 1,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 0,
+        col: 2,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 0,
+        col: 3,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 1,
+        col: 0,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 1,
+        col: 1,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 1,
+        col: 2,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 1,
+        col: 3,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 2,
+        col: 0,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 2,
+        col: 1,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 2,
+        col: 2,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 2,
+        col: 3,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 3,
+        col: 0,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 3,
+        col: 1,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 3,
+        col: 2,
+        isMine: false,
+        hidden: true
+      },
+  
+      { row: 3,
+        col: 3,
+        isMine: false,
+        hidden: true
+      },
+  
+    ]
+  
+    }
+  
+  }
+// make a function that creates a new board
+// it will need to be an object with cells
+// those cells will need row, col, isMine, isMarked, hidden properties
+// need to randomise whether isMine is true of false
+// look up Math.random
+// add it to startGame function
+
+
+
+
+var board = {
   cells: [
     {row: 0,
       col: 0,
@@ -116,7 +230,6 @@ function startGame () {
 
   lib.initBoard()
 }
-
 
 
 document.onclick = checkForWin
