@@ -124,22 +124,17 @@ function startGame () {
 document.onclick = checkForWin
 
 function checkForWin () {
-  
-  var isTheWinner = false
+  for (let i = 0; i < board.cells.length; i++) {
 
-  for (var i = 0 ; i < board.cells.length; i++){
-
-    var cell = board.cells[i]
-
-    if (cell.isMine && !cell.isMarked){
-      isTheWinner = true 
-    }  
-  
-    if (isTheWinner){
-      lib.displayMessage('You win!')
-    }
-
-}
+    if ((board.cells[i].isMine === true) && (board.cells[i].isMarked !== true)) {
+      return;
+    } 
+    
+    else if ((board.cells[i].isMine !== true) && (board.cells[i].hidden === true)) {
+      return;
+    } 
+  }
+  displayMessage('You win!')
 }
 
 function countSurroundingMines (cell) {
@@ -160,7 +155,7 @@ function countSurroundingMines (cell) {
 }
 
 function randomMine() { 
-  if (Math.random() < 0.10) 
+  if (Math.random() < 0.30) 
   { return true } 
     else { return false }
 }
