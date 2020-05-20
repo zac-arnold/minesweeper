@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+
 }
 
 body {
@@ -8,7 +9,7 @@ body {
   align-items: center;
   justify-content: flex-center;
   flex-direction: column;
-  
+
 }
 
 #message, #notes {
@@ -38,6 +39,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .board div:hover {
